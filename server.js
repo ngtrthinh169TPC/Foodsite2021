@@ -17,10 +17,8 @@ app.get("/api/products", (req, res) => {
 	var sql = "SELECT * FROM products";
 	connection.query(sql, function (err, results) {
 		if (err) throw err;
-		res.json({ news: results });
+		res.json({ product: results });
 	});
 });
-
-app.get("/", (req, res) => res.send("Hello World!"));
 
 app.listen(4000, () => console.log("App listening on port 4000"));
