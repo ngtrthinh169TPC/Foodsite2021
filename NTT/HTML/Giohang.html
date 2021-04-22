@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width:device-width, initial-scale:1" />
+	<title>Giỏ hàng</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/header_footer.css" />
+	<link rel="stylesheet" type="text/css" href="../CSS/Giohang.css" />
+	<script type="text/javascript" src="../Javascripts/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../Javascripts/Trangchu.js"></script>	
+
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<header>
+		<div class="look">
+			<!--logo-->
+			<div id="header_logo">
+				<a href="" class="header_logo-link">
+					<img class="header_logo-img" src="../images/LogoDatami.png" alt="">
+				</a>
+			</div>
+				
+			<!--name-->
+			<div class="logo_name">DATAMI</div>
+			
+			<!--search-->
+			<div id="header_search">
+				<input type="text" class="header_search_input" placeholder="Bạn muốn tìm gì?" />
+				<button class="header_search_bt">
+					<img class="search_bt_img" src="../images/search.png" alt="" />
+				</button>
+			</div>
+				
+			<!-- contact -->
+			<div id="header_contact">
+				<span class="hotline">0123456789</span>
+				<br />
+				<span class="contact_title">Liên hệ</span>
+			</div>
+			
+			<!-- cart -->
+			<div id="header_cart">
+				<div class="header_cart_wrap">
+					<a href="">
+						<img class="header_cart-img" src="../images/cart.png" alt="">
+					</a>
+						
+				</div>
+			</div>
+				
+			<!-- customer -->
+			<div id="header_user">
+				<a href="">
+					<img class="header_user-img" src="../images/user.png" alt=""/>
+				</a>
+			</div>
+		</div>
+	</header>
+	
+	<main>
+		<!-- Đường dẫn -->
+		<section>
+			<div class="look">
+				<div class="row1">
+					<ul>
+						<li>
+							<a href="">Trang chủ</a>
+							<span>></span>
+						</li>
+						<li>
+							<a href="">Giỏ hàng của bạn</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<!-- mục thanh toán -->
+		<section>
+			<div class="look">
+				<div class="show_cart">
+					<div class="main_container">
+						<form action="" method="post" novalidate class="main_container_form">
+							<div class="cart_form">
+								<div class="cart_form_up">
+									<div style="width: 19%" class="box">Sản phẩm</div>
+									<div style="width: 28%" class="box">Thông tin sản phẩm</div>
+									<div style="width: 17%" class="box">Đơn giá</div>
+									<div style="width: 18%" class="box">Số lượng</div>
+									<div style="width: 13%" class="box">Thành tiền</div>
+									<div style="width: 5%" class="box">Xóa</div>
+								</div>
+								<div class="cart_form_down">
+									<div class="cart_form_body">
+										<div style="width: 19%" class="box">
+											<a href="" class="product_selected">
+												<img src="../images/banhngokepkem.jpg" class="product_selected_img" alt="">
+											</a>
+										</div>
+										<div style="width: 28%" class="box">
+											<span>Bánh ngò kẹp kem</span>
+										</div>
+										<div style="width: 17%" class="box">
+											<span>50.000<u>đ</u></span>
+										</div>
+										<div style="width: 18%" class="box">
+											<ul class="input_number">
+												<input class="variantID" type="hidden" name="Id" />
+												<li style="width:20%" class="count_bt">
+													<button class="count_minus" type="button" disable>-</button>
+												</li>
+												<li style="width:40%" class="count_bt">
+													<input class="input-text_sum-product" type="text" name="Lines" size="4" value="1" />
+												</li>
+												<li style="width:20%" class="count_bt">
+													<button class="count_plus" type="button" disable>+</button>
+												</li>
+											</ul>
+										</div>
+										<div style="width: 13%" class="box">
+											<span>50.000<u>đ</u></span>
+										</div>
+										<div style="width: 5%" class="box">
+											<a href="">
+												<img class="delete" src="../images/xoa.png" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="sum_money">
+					<ul>
+						<li>
+							<span>Tổng tiền:</span>
+							<strong>
+							<span style="color: red">50.000đ</span>
+							</strong>
+						</li>
+						<li>
+							<button class="pay_button" type="button">
+							<span>Tiến hành đặt hàng</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<footer>
+		<div class="look">
+			<div id="footer_about_us" class="footer_cols">
+				<h1>VỀ CHÚNG TÔI</h1>
+				<hr />
+				<ul>
+					<li><a href="">Trang chủ</a></li>
+					<li><a href="">Giới thiệu</a></li>
+					<li><a href="">Facebook</a></li>
+					<li><a href="">Instagram</a></li>
+				</ul>
+			</div>
+			<div id="footer_support" class="footer_cols">
+				<h1>HỖ TRỢ KHÁCH HÀNG</h1>
+				<hr />
+				<ul>
+					<li><a href="">Đăng nhập</a></li>
+					<li><a href="">Đăng ký</a></li>
+					<li><a href="">Giỏ hàng</a></li>
+				</ul>
+			</div>
+			<div id="footer_pilicy" class="footer_cols">
+				<h1>CHÍNH SÁCH MUA HÀNG</h1>
+				<hr />
+				<ul>
+					<li><a href="">Chính sách bảo mật</a></li>
+					<li><a href="">Chính sách vận chuyển</a></li>
+					<li><a href="">Chính sách đổi trả</a></li>
+					<li><a href="">Quy định sử dụng</a></li>
+				</ul>
+			</div>
+			<div id="footer_contact" class="footer_cols">
+				<h1>LIÊN HỆ VỚI CHÚNG TÔI</h1>
+				<hr />
+				<ul>
+					<li>
+						<img src="../images/address.png" alt="" />
+						144 Xuân Thủy, Cầu Giấy, Hà Nội
+					</li>
+					<li>
+						<img src="../images/call.jpg" alt="" />
+						0123456789
+					</li>
+					<li>
+						<img src="../images/email.png" alt="" />
+						datami@gmail.com
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="copyright">© Bản quyền thuộc về Datami | Cung cấp bởi NTT</div>
+	</footer>
+</body>
+</html>
