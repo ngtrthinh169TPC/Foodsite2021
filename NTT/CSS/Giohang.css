@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+main{
+	background-color: white;
+}
+section{
+	padding: 10px 0;
+}
+
+.row1 ul{
+	text-align: left;
+	list-style: none;
+	padding: 0;
+	margin: 10px 0;
+}
+
+.row1 ul li{
+	display: inline-block;
+}
+
+.row1 ul li a{
+	text-decoration: none;
+	color:black;
+	font-size: 16px;
+}
+
+/*Xem giỏ hàng*/
+.show_cart{
+	width: auto;
+	float: none;
+}
+
+.main_container{
+	overflow: hidden;
+	border-top:none; 
+}
+.cart_form_up{
+	clear: both;
+	font-weight: bold;
+	background-color: white;
+	border: 1px solid #ebebeb;
+	margin: 10px 0;
+	width: 100%;
+	float: left;
+	
+}
+
+.box{
+	float: left;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+.cart_form_down{
+	clear: both;
+	font-weight: bold;
+	background-color: white;
+	border: 1px solid #ebebeb;
+	margin: 10px 0;
+	width: 100%;
+	height: 155px;
+	float: left;
+}
+
+.cart_form_body div{
+	line-height: 20px;
+    vertical-align: top;
+    height: 155px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+    float: left;
+}
+
+.product_selected{
+	width: 100%;
+	height: 100%;
+}
+
+.product_selected_img{
+	width: 100%;
+	height: 100%;
+}
+
+.delete{
+	width: 100%;
+	height: 100%;
+}
+
+.xoa{
+	width: 50%;
+	height: inherit;
+}
+
+/*Chọn số lượng sản phẩm*/
+.box ul{
+	border: 1px solid #ebebeb;
+}
+
+.input_number{
+	margin: 0;
+	padding: 0;
+}
+
+.input_number li{
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.count_bt button{
+	background-color: white;
+	border: 0;
+}
+
+.input-text_sum-product{
+	width: 100%;
+	text-align: center;
+	background-color: white;
+	border: 0;
+}
+
+/*Tổng tiền - tiến hành đặt hàng*/
+.sum_money ul{
+	clear: left;
+    padding: 7px;
+    margin-bottom: 30px;
+    text-align: right;
+    padding-right: 0;
+    border-top: none;
+}
+
+.sum_money ul li{
+	list-style: none;
+	font-size: 20px;
+}
+
+.pay_button{
+	margin-top: 15px;
+	padding: 10px 20px;
+	border: none;
+	background: #f08b18;
+	color: white;
+}
+
+.pay_button span {
+	font-size: 18px;
+}
