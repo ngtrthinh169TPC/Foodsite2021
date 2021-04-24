@@ -1,18 +1,15 @@
 import React, { Component } from "react";
 import AccountService from "../services/account.service";
 
-class Register extends Component {
+class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.onChangeUsername = this.onChangeUsername.bind(this);
-		this.onChangeEmail = this.onChangeEmail.bind(this);
 		this.onChangePassword = this.onChangePassword.bind(this);
-		this.handleRegister = this.handleRegister.bind(this);
+		this.handleLogin = this.handleLogin.bind(this);
 		this.state = {
 			username: "",
-			email: "",
 			password: "",
-			roles: [],
 			message: "",
 		};
 	}
@@ -23,29 +20,19 @@ class Register extends Component {
 		});
 	}
 
-	onChangeEmail(e) {
-		this.setState({
-			email: e.target.value,
-		});
-	}
-
 	onChangePassword(e) {
 		this.setState({
 			password: e.target.value,
 		});
 	}
 
-	handleRegister(e) {
+	handleLogin(e) {
 		e.preventDefault();
 
-		AccountService.register(
-			this.state.username,
-			this.state.email,
-			this.state.password
-		).then(
-			(response) => {
+		AccountService.login(this.state.username, this.state.password).then(
+			() => {
 				this.setState({
-					message: response.data.message,
+					message: "Looks like you've logged in successfully",
 				});
 			},
 			(error) => {
@@ -61,22 +48,14 @@ class Register extends Component {
 	render() {
 		return (
 			<div>
-				<h2>REGISTER</h2>
-				<form onSubmit={this.handleRegister}>
+				<h2>LOGIN</h2>
+				<form onSubmit={this.handleLogin}>
 					<div>
 						<label>Username</label>
 						<input
 							type='text'
 							value={this.state.username}
 							onChange={this.onChangeUsername}
-						/>
-					</div>
-					<div>
-						<label>Email</label>
-						<input
-							type='text'
-							value={this.state.email}
-							onChange={this.onChangeEmail}
 						/>
 					</div>
 					<div>
@@ -96,4 +75,4 @@ class Register extends Component {
 	}
 }
 
-export default Register;
+export default Login;

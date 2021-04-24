@@ -10,4 +10,6 @@ module.exports = function (app) {
 		],
 		controller.register
 	);
+
+	app.post("/api/account/login", controller.login);
 };
