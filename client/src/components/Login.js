@@ -34,6 +34,8 @@ class Login extends Component {
 				this.setState({
 					message: "Looks like you've logged in successfully",
 				});
+				this.props.history.push("/profile");
+				window.location.reload();
 			},
 			(error) => {
 				console.log(error);

@@ -1,0 +1,23 @@
+.navbar-main {
+	margin: 0px auto;
+	background-color: #fedc81;
+}
+
+.navbar-content {
+	width: 75%;
+	margin: 0px auto;
+}
+
+.navbar-logo {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.navbar-logo-name {
+	font-size: 40px;
+	color: #f08220;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}

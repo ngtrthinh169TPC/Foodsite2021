@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router";
 import AccountService from "../services/account.service";
 
 class Profile extends Component {
@@ -6,7 +7,7 @@ class Profile extends Component {
 		super(props);
 
 		this.state = {
-			redirectTarget: null,
+			redirect: "",
 			userReady: false,
 			currentUser: { username: "" },
 		};
@@ -17,7 +18,7 @@ class Profile extends Component {
 
 		if (!currentUser) {
 			this.setState({
-				redirect: "/home",
+				redirect: "/login",
 			});
 		} else {
 			this.setState({
@@ -28,6 +29,10 @@ class Profile extends Component {
 	}
 
 	render() {
+		if (this.state.redirect) {
+			return <Redirect to={this.state.redirect} />;
+		}
+
 		return (
 			<div>
 				<h2>PROFILE</h2>
