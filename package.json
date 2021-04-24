@@ -1,5 +1,5 @@
 {
-  "name": "foodsite2021",
+  "name": "Foodsite2021",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -22,9 +22,13 @@
   "homepage": "https://github.com/ngtrthinh169TPC/Foodsite2021#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
     "concurrently": "^6.0.2",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
-    "react-router-dom": "^5.2.0"
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
   }
 }

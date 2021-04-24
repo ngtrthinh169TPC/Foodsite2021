@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import Navbar from "./Navbar";
+import "./App.css";
+// import Test from "./components/Test";
+import Register from "./components/Register";
 
 class App extends Component {
 	render() {
 		return (
 			<div>
-				<Navbar />
+				{/* <Test /> */}
+				<Register />
 			</div>
 		);
 	}
