@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+import DataService from "../services/data.service";
 
 class Test extends Component {
 	constructor(props) {
@@ -10,8 +10,7 @@ class Test extends Component {
 	}
 
 	componentDidMount() {
-		axios
-			.get("/api/products/data")
+		DataService.getProducts()
 			.then((res) => {
 				this.setState({ products: res.data.products });
 			})

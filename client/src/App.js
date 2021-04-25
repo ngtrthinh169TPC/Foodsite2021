@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Test from "./components/Test";
+// import Test from "./components/Test";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
@@ -13,7 +13,7 @@ class App extends Component {
 			<div>
 				<Navbar />
 				<Switch>
-					<Route exact path={["/", "/home"]} component={Test} />
+					<Route exact path={["/", "/home"]} component={Home} />
 					<Route path='/register' component={Register} />
 					<Route path='/login' component={Login} />
 					<Route path='/profile' component={Profile} />

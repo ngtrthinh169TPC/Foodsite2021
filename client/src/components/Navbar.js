@@ -35,37 +35,45 @@ class Navbar extends Component {
 		const currentUser = this.state.currentUser;
 
 		return (
-			<nav className='navbar-main'>
-				<div className='navbar-content'>
-					<div className='navbar-logo'>
+			<nav className='header-main'>
+				<div className='header-content'>
+					<div className='header-logo'>
 						{/* logo */}
 						<Link to='/'>
 							<img src='/images/LogoDatami.png' alt='Logo' />
 						</Link>
+						<Link to='/'>
+							<div className='header-logo-name'>DATAMI</div>
+						</Link>
 					</div>
-					<div className='navbar-logo-name'>DATAMI</div>
-					<ul>
-						{!currentUser && (
-							<li>
-								<Link to='/register'>Register</Link>
-							</li>
-						)}
-						{!currentUser && (
-							<li>
-								<Link to='/login'>Login</Link>
-							</li>
-						)}
-						{currentUser && (
-							<li>
-								<Link to='/profile'>Profile</Link>
-							</li>
-						)}
-						{currentUser && (
-							<li>
-								<button type='button' onClick={this.logOut}>
-									Logout:
-								</button>
-							</li>
+					<ul className='header-log-container'>
+						<div className='header-log-button'>
+							<i className='fas fa-shopping-cart' />
+						</div>
+						{currentUser ? (
+							<div className='header-log-button'>
+								<li>
+									<Link to='/profile'>
+										<i className='fas fa-user' />
+									</Link>
+								</li>
+								<li>
+									<i className='fas fa-sign-out-alt' onClick={this.logOut} />
+								</li>
+							</div>
+						) : (
+							<div className='header-log-button'>
+								<li>
+									<Link to='/register'>
+										<i className='fas fa-user-plus' />
+									</Link>
+								</li>
+								<li>
+									<Link to='/login'>
+										<i className='fas fa-sign-in-alt' />
+									</Link>
+								</li>
+							</div>
 						)}
 					</ul>
 				</div>

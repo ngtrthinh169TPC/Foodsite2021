@@ -1,8 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const mysql = require("mysql");
 const cors = require("cors");
-// const dbConfig = require("./server/configs/db.config");
 
 const app = express();
 
@@ -47,31 +45,13 @@ db.sequelize.sync();
 // 	});
 // }
 
-const connection = mysql.createConnection({
-	host: "localhost",
-	user: "root",
-	password: "18042001",
-	database: "foodsitedata",
-});
-
-connection.connect(function (err) {
-	err ? console.log(err) : console.log(connection);
-});
-
 app.get("/", (req, res) => res.send("hello sucker"));
-
-app.get("/api/products/data", (req, res) => {
-	var sql = "SELECT * FROM products";
-	connection.query(sql, function (err, results) {
-		if (err) throw err;
-		res.json({ products: results });
-	});
-});
 
 app.get("/api/test", (req, res) => {
 	res.json({ message: "Ducking message" });
 });
 
+require("./server/requests/data.request")(app);
 require("./server/requests/account.request")(app);
 
 app.listen(4000, () => console.log("Server.js is listening to port 4000"));

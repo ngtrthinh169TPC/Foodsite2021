@@ -1,23 +1,56 @@
-.navbar-main {
-	margin: 0px auto;
+.header-main {
 	background-color: #fedc81;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-content {
-	width: 75%;
-	margin: 0px auto;
+.header-content {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
 }
 
-.navbar-logo {
+.header-logo {
 	display: inline-block;
 	vertical-align: middle;
 }
 
-.navbar-logo-name {
-	font-size: 40px;
+.header-logo a {
+	vertical-align: middle;
+}
+
+.header-logo-name {
+	font-size: 2.5rem;
 	color: #f08220;
 	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 	display: inline-block;
 	vertical-align: middle;
-	margin-left: 10px;
+	margin-left: 1rem;
+}
+
+.header-log-container {
+	margin: auto 0;
+}
+
+.header-log-button {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.header-log-button li {
+	display: inline-block;
+}
+
+.header-log-button i {
+	color: #f08220;
+	vertical-align: middle;
+	padding-bottom: 0.25rem;
+	font-size: 2rem;
+	margin: 0 0.75rem;
+}
+
+.header-log-button i:hover {
+	color: #b1b1b1;
+	transition: all 0.4s linear;
+	cursor: pointer;
 }
