@@ -8,6 +8,11 @@ body {
 	font-size: 1rem;
 	background-color: #e4e8e1;
 }
+section {
+	width: 80%;
+	margin: 1rem auto;
+	display: flex;
+}
 ul {
 	list-style-type: none;
 }
@@ -31,4 +36,8 @@ h4 {
 	body {
 		background-color: darkslategray;
 	}
+}
+
+.price-vnd {
+	text-decoration: underline;
 }

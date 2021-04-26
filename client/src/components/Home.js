@@ -1,6 +1,6 @@
 import { Component } from "react";
 import "../styles/Home.css";
-import Slider from "./Slider";
+import Carousel from "./Carousel";
 import Tab from "./Tab";
 
 import DataService from "../services/data.service";
@@ -9,11 +9,18 @@ class Home extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			allProducts: [],
 			productlines: [],
 		};
 	}
 
 	componentDidMount() {
+		DataService.getProducts()
+			.then((res) => {
+				this.setState({ allProducts: res.data.products });
+			})
+			.catch((error) => console.log(error));
+
 		DataService.getProductlines()
 			.then((res) => {
 				this.setState({
@@ -35,7 +42,11 @@ class Home extends Component {
 					</div>
 					<div id='home-container2'>
 						<div className='home-container-halfsize home-banner'>
-							<img src='../images/banner2.jpg' alt='banner2' />
+							<img
+								id='cut-for-margin'
+								src='../images/banner2.jpg'
+								alt='banner2'
+							/>
 						</div>
 						<div className='home-container-halfsize home-banner'>
 							<img src='../images/banner3.jpg' alt='banner3' />
@@ -50,7 +61,10 @@ class Home extends Component {
 				<>
 					{this.state.productlines.map((item) => (
 						<section key={item.productLine}>
-							<Slider productline={item.productLine} />
+							<Carousel
+								allProducts={this.state.allProducts}
+								productline={item.productLine}
+							/>
 						</section>
 					))}
 				</>

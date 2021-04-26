@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
+
 import AccountService from "../services/account.service";
 
 class Navbar extends Component {
@@ -48,7 +49,9 @@ class Navbar extends Component {
 					</div>
 					<ul className='header-log-container'>
 						<div className='header-log-button'>
-							<i className='fas fa-shopping-cart' />
+							<Link to='/cart'>
+								<i className='fas fa-shopping-cart' />
+							</Link>
 						</div>
 						{currentUser ? (
 							<div className='header-log-button'>

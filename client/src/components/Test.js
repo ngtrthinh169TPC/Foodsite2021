@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../styles/Test.css";
 import DataService from "../services/data.service";
 
 class Test extends Component {
@@ -18,18 +19,20 @@ class Test extends Component {
 	}
 
 	render() {
+		const filtered = this.state.products.filter(
+			(item) => item.productLine === "Bánh tráng"
+		);
+
 		return (
-			<div>
-				<h2>DEMO</h2>
+			<div className='container'>
 				<ul>
-					{this.state.products.map((item) => (
-						<li key={item.id}>
-							<h3>{item.productName}</h3>
-							<h4>{item.productDescription}</h4>
+					{filtered.map((item, index) => (
+						<li key={index} className='slide'>
 							<img
 								src={`../products-image/${item.imageLink}`}
 								alt={item.productName}
 							/>
+							<h2>{item.productName}</h2>
 						</li>
 					))}
 				</ul>

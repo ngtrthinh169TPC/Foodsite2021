@@ -2,12 +2,6 @@
 	margin: 1rem;
 }
 
-.homepage section {
-	width: 80%;
-	margin: 1rem auto;
-	display: flex;
-}
-
 .homepage > section > div {
 	margin: 0.25rem;
 }
@@ -42,4 +36,8 @@
 #home-container4 {
 	height: 20vw;
 	aspect-ratio: unset;
+}
+
+#cut-for-margin {
+	padding-bottom: 0.25rem;
 }

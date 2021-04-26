@@ -16,4 +16,4 @@ Note ngày 18/04/2021: Hướng dẫn chạy trong localhost:
 
 Note ngày 23/04/2021: Danh sách các dependencies của nodejs:
 (Không xuống dòng để copy và install cho dễ :> )
-axios bcryptjs concurrently cors express jsonwebtoken mysql mysql2 react-router-dom sequelize
+axios bcryptjs concurrently cors express jsonwebtoken mysql mysql2 react react-dom react-router-dom sequelize
